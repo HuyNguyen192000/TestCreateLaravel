@@ -163,6 +163,21 @@ Route::get('/', function(){
 });
 
 Route::get('/test', function(){
+	// try {
+	// 	\DB::connection()->getPdo();
+	// } catch (Exception $e) {
+	// 	die("Could not connect to the database.  Please check your configuration.");
+	// }
+	\DB::connection()->getPdo();
+	dd(\DB::table('categories')->get());
 	dd(1);
 });
 
+Route::get('/excel', function(){
+	dd(1);
+	$inputFileName = public_path() . '/files/DMSACH_fix8.Xls';
+	/**  Create a new Reader of the type defined in $inputFileType  **/
+	$objReader = \PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile($inputFileName);
+	$objReader->setReadDataOnly(true);
+	$objPHPExcel = $objReader->load($inputFileName);
+});

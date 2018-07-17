@@ -21,7 +21,7 @@
                     <div class="card">
                         <div class="card-body col-md-12">
                             <a href="/excel-for-GK" class="btn btn-warning col-md-4">Xuất GK</a>
-                            <a href="" class="btn btn-warning col-md-4">Chưa có</a>
+                            <a href="/excel" class="btn btn-warning col-md-4">Xuất excel</a>
                             <a href="" class="btn btn-warning col-md-3">Chưa có</a>
                         </div>
                     </div>
